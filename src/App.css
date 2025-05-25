@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+body{
+  width: 100%;
+  margin: 0 auto;
+  background-color: #F4F4F2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav{
+  z-index: 10001;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo img {
+  margin-top: 12px;
+  cursor: pointer;
+  width: 270px;
+}
+
+.navbar {
+  padding: 10px 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 1em;
+}
+
+nav ul li a{
+  color: #5D284C;
+}
+
+nav ul li a:hover{
+  text-decoration: underline solid #5D284C;
+  
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-family: 'Markazi Text';
+  font-size: 21px;
+}
+
+.nav-links.visible {
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 100%;
+  background-color: #5D284C;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: all 0.3s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-banner {
+  font-family: 'Playfair Display';
+  font-size: large;
+  height: 34vw;
+  width: 30px auto;
+  background: url('./components/images/headers/header\ image.jpg');
+  background-size: contain;
+  position: relative;
 }
