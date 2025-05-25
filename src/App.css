@@ -47,8 +47,6 @@ nav ul li a:hover{
   cursor: pointer;
 }
 
-
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -88,4 +86,75 @@ h1 {
   position: absolute;
   right: 0px;
   bottom: 0px;
+}
+
+.welcome-message {
+  font-size: 28px;
+  font-family: "Markazi Text";
+  padding: 80px;
+  text-align: center;
+  background-color: #E1C9D5;
+  color: #4B1535;
+}
+
+.welcome-text{
+margin: 40px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  flex-wrap: wrap;
+  height: 70vh;
+  width: 100%;
+  background-color: #D183A9;
+  padding-bottom: 60px;
+}
+
+.card {
+  width: 430px;
+  border-radius: 8px;  
+  background-color: white;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 350px;
+  height: 370px;
+  border-radius: 30px;  
+  object-fit: cover;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: block;
+  margin: auto;
+}
+
+.content-header {
+  background-color: #D183A9;
+  padding: 30px;
+}
+.title {
+  font-size: 30px;
+  font-family: 'Markazi Text';
+  font-weight: 600;
+  text-align: center;
+  color: #FDFBCF;
+}
+
+.button-style {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.card-button {
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Markazi Text';
+  font-weight: 500;
+  background-color: #A24C61;
+  color: #FDFBCF;
+  border-radius: 40px;
 }
