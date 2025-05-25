@@ -72,11 +72,20 @@ nav ul li a:hover{
 }
 
 .header-banner {
-  font-family: 'Playfair Display';
-  font-size: large;
-  height: 34vw;
-  width: 30px auto;
-  background: url('./components/images/headers/header\ image.jpg');
-  background-size: contain;
+  height: 48vw;
+  width: 40px auto;
+  background: url('./images/headers/purple\ header.jpg') no-repeat;
+  background-size: cover;
   position: relative;
+}
+
+h1 {
+  font-size: 55px;
+  font-family: 'Arial Black';
+  font-style: italic;
+  color: white;
+  padding-top: 28px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }

@@ -5,7 +5,7 @@ const header = () => {
    <header>
     <section>
         <div className='header-banner'>
-            <h1>"The Language of Flowers, Spoken Fluently"</h1>
+            <h1 className='header-text'>"The Language of Flowers, Spoken Fluently"</h1>
         </div>
     </section>
    </header>
