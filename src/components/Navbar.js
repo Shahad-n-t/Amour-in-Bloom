@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom'
 import logo from "../images/headers/logo.jpg"
 
 const Navbar = () => {
 
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [openMenu, setOpenMenu] = useState(false);
 
     const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
+        setOpenMenu(!openMenu);
     }
 
     <div className='menu-icon' onClick={toggleMenu}>
@@ -18,30 +19,30 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`navbar ${menuOpen? "open" : ""}`}>
+    <nav className={`navbar ${openMenu? "open" : ""}`}>
       <a href='/' className='logo'>
       <img src={logo} alt='Amour in Bloom logo'/>
       </a>
       
 
-      <ul className={`nav-links ${menuOpen ? "visible" : "" }`}>
+      <ul className={`nav-links ${openMenu ? "visible" : "" }`}>
         <li>
-            <a href='/'>Home</a>
+            <Link to='/'>Home</Link>
         </li>
         <li>
-            <a href='/'>About</a>
+            <Link to='/About'>About</Link>
         </li>
         <li>
-            <a href='/'>Contact Us</a>
+            <Link to='/Categories'>Categories</Link>
         </li>
         <li>
-            <a href='/'>Categories</a>
+            <Link to='/ContactUs'>Contact us</Link>
         </li>
         <li>
-            <a href='/'>Shopping Cart</a>
+             <Link to='/ShoppingCart'>Shopping Cart</Link>
         </li>
         <li>
-            <a href='/'>Login</a>
+            <Link to='/Login'>Login</Link>
         </li>
       </ul>
     </nav>

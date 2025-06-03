@@ -4,6 +4,7 @@ import Bouquet from '../images/shop aesthetic/purple bouquet.jpg';
 import Baskets from '../images/shop aesthetic/baskets.jpg'
 import WhiteFlowers from '../images/peatal colors/white flower.jpg'
 import PinkFlowers from '../images/peatal colors/pink flowers.jpg'
+import { Link } from 'react-router-dom';
 
 const Categories = () => {
   return (
@@ -29,21 +30,27 @@ const Categories = () => {
          <article className='card'>
          <img className='card-img' src={BestSellers} alt='best sellers'/>
          <div className='button-style'>
-          <button className='card-button' aria-label='On-Click'>Best sellers</button>
+          <Link to='/BestSellers'>
+            <button className='card-button' aria-label='On-Click'>Best sellers</button>
+          </Link>
           </div>
          </article>
 
          <article className='card'>
           <img className='card-img' src={Bouquet} alt='best sellers'/>
           <div className='button-style'>
-          <button className='card-button' aria-label='On-Click'>Flower bouquets</button>
+            <Link to='/FlowerBouquets'>
+             <button className='card-button' aria-label='On-Click'>Flower bouquets</button>
+            </Link>
           </div>
           </article>
 
          <article className='card'>
           <img className='card-img' src={Baskets} alt='best sellers'/>
           <div className='button-style'>
-         <button className='card-button' aria-label='On-Click'>Flower baskets</button>
+            <Link to='/FlowerBaskets'>
+              <button className='card-button' aria-label='On-Click'>Flower baskets</button>
+            </Link>
          </div>
          </article>
         </div>
