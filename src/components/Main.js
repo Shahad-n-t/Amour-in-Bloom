@@ -55,7 +55,7 @@ const Categories = () => {
          </article>
         </div>
         <div className='category-link'>
-          <a href='/' className='seeMore'><u>See More</u></a>
+          <Link to='Categories' className='seeMore'><u>See More</u></Link>
          </div>
 
 

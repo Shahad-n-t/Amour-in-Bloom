@@ -84,7 +84,7 @@ nav ul li a:hover{
   position: relative;
 }
 
-h1 {
+ h1 {
   font-size: 55px;
   font-family: 'Arial Black';
   font-style: italic;
@@ -393,6 +393,56 @@ font-size: 18px;
 .about-text span {
   font-weight: 600;
 }
+
+/*contact page styling*/
+
+.contact-page {
+  background-color: #F4F4F2;
+
+}
+
+.contact-img {
+  height: 400px;
+  width: 40px auto;
+  background-image: url('./images/headers/purple\ bg\ flower3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+}
+
+.contact-headerText h2 {
+  font-family: 'Markazi Text';
+  font-size: 50px;
+  color: #5D284C;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contact-boxes {
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 3rem;
+  margin-top: 60px;
+}
+
+.phone-box {
+  display: grid;
+  height: 250px;
+  width: 260px;
+  padding: 20px;
+  background-color: #FDFBCF;
+}
+
+.whatsapp-box {
+  display: grid;
+  height: 250px;
+  width: 260px;
+  padding: 20px;
+  background-color: #FDFBCF;
+  justify-content: center;
+}
+
 
 /* Footer css:*/
 
