@@ -29,14 +29,16 @@ const Footer = () => {
             <div>
                 <h3>Find us on</h3>
                 <div className='footer-icons'>
-                <FontAwesomeIcon icon={faTwitter} size='2x' />
-                <FontAwesomeIcon icon={faInstagram} size='2x' />
-                <FontAwesomeIcon icon={faWhatsapp} size='2x' />
+                <FontAwesomeIcon icon={faTwitter} size='2x' className='footer-icon'/>
+                <FontAwesomeIcon icon={faInstagram} size='2x' className='footer-icon' />
+                <FontAwesomeIcon icon={faWhatsapp} size='2x' className='footer-icon' />
                 <br/>
                 <br/>
-                 <p>Copyright copyright 2025        | All rights reserved </p>
                 </div>
-            </div>
+             
+                 <hr className='footer-separator'/>
+                 <p>Copyright copyright 2025        | All rights reserved </p>
+           </div>
 
         </section>
     </footer>

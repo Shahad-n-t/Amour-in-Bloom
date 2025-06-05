@@ -398,16 +398,30 @@ font-size: 18px;
 
 .contact-page {
   background-color: #F4F4F2;
-
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+  padding-bottom: 40px;
 }
 
 .contact-img {
-  height: 400px;
-  width: 40px auto;
-  background-image: url('./images/headers/purple\ bg\ flower3.jpg');
+  position: relative;
+  height: 300px;
+  width: 100% ;
+  background-image: url('./images/headers/purple bg flower3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   padding-bottom: 20px;
+  display: block;
+}
+
+.contact-headerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .contact-headerText h2 {
@@ -415,32 +429,145 @@ font-size: 18px;
   font-size: 50px;
   color: #5D284C;
   font-weight: 600;
-  text-align: center;
 }
 
 .contact-boxes {
-  display: inline-flex;
-  justify-content: space-between;
-  padding: 20px;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  grid-template-rows: repeat(2, 300px);
+  grid-gap: 80px;
   margin-top: 60px;
+  padding: 30px;
+  padding-left: 100px;
 }
 
 .phone-box {
-  display: grid;
-  height: 250px;
-  width: 260px;
-  padding: 20px;
   background-color: #FDFBCF;
+  padding: 30px;
+  border-radius: 24px;
+  border: solid 4px #F09FC6;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.box-header {
+  color: #5D284C;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.box-text {
+  color: #5D284C;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.fa-icon {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #A24C61;
 }
 
 .whatsapp-box {
-  display: grid;
-  height: 250px;
-  width: 260px;
-  padding: 20px;
   background-color: #FDFBCF;
+  padding: 30px;
+  border-radius: 24px;
+  border: solid 4px #F09FC6;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.email-box {
+  background-color: #FDFBCF;
+  padding: 30px;
+  border-radius: 24px;
+  border: solid 4px #F09FC6;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.ourShop-box {
+  background-color: #FDFBCF;
+  padding: 30px;
+  border-radius: 24px;
+  border: solid 4px #F09FC6;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 50px 20px 150px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.form-header {
+  padding-top: 20px;
+  font-size: 24px;
+  color: #5D284C;
+  font-weight: bolder;
+}
+
+.form-field label {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-family: "Markzi Text";
+  color: #5D284C;
+  font-weight: bolder;
+}
+
+.form-field input {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #E1C9D5;
+  border: 2px solid #c37fa1;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #4B1535;  
+  font-style: italic;
+  font-size: 12px;
+}
+
+#message {
+  padding-bottom: 80px;
+}
+
+.formBtn {
   justify-content: center;
+  text-align: center;
+}
+
+.formBtn input {
+  padding: 10px 40px 10px 40px;
+  border-radius: 20px;
+  border: 2px solid #4B1535;
+  font-size: 16px;
+  background-color: #F09FC6;
+  color: #4B1535;
+  font-weight: bolder;
+}
+
+.formBtn input:not(:disabled):hover {
+  background-color: #d86fae; 
+  color: white; 
+}
+
+.formBtn input:disabled {
+  background-color: #ddcad4;
+  color: #553e49;
+  border-color: #deadc7;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 
@@ -491,9 +618,16 @@ footer li a:hover {
 
 .footer-icons {
   display: flex;
-  gap: 25px;
+  gap: 35px;
   color: #E1C9D5;
   justify-content: center;
+  transition: all 6s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.footer-icon:hover {
+  transform: translateY(-3px) translateX(-5px);
+  color: #F09FC6;
 }
 
 footer ul{
@@ -502,6 +636,12 @@ footer ul{
 
 footer ul li{
   padding: 8px 0;
+}
+
+.footer-separator {
+  border: none;
+  border-top: 2px solid #FDC2DF;
+  width: 100%;
 }
 
 footer p {
