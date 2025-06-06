@@ -571,6 +571,99 @@ font-size: 18px;
 }
 
 
+/* Category section*/
+
+.category-image {
+  height: 200px;
+  width: 100% ;
+  background-image: url('./images/headers/flower bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 20px;
+  display: block;
+}
+
+.categories {
+  background-color: #eae0e4;
+  min-height: 120vh;
+  box-sizing: border-box;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 10px;
+  margin-bottom: 4rem;
+}
+
+.category-card {
+  background-color: #5D284C;
+  padding: 20px;
+  border-radius: 20px;
+  border: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  background-color: #6e2d5e; 
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.category-card img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  border: 0;
+}
+
+.category-header {
+  font-size: 40px;
+  font-family: 'Markazi Text';
+  font-weight: 700;
+  color: #3A345B;
+  align-self: flex-start;
+  text-align: left;
+  padding-top: 40px;
+  padding-left: 100px;
+  padding-bottom: 20px;
+  background-color: #eae0e4;
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.arrow {
+  rotate: 90deg;
+  color: #D183A9;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover .arrow {
+  color: #ce6095;
+}
+
+.category-card h5 {
+  text-align: left;
+  font-size: 20px;
+  color: #E1C9D5;
+}
+
+.category-card span {
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: bold;
+}
+
 /* Footer css:*/
 
 footer section{
