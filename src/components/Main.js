@@ -26,7 +26,7 @@ const Categories = () => {
         <header className='title'>Categories</header>
         </div>
 
-        <div className='categories'>
+        <div className='main-categories'>
          <article className='card'>
          <img className='card-img' src={BestSellers} alt='best sellers'/>
          <div className='button-style'>
