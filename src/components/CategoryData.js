@@ -1,4 +1,3 @@
-import React from 'react'
 
 /* Best Sellers*/
 import SunsetSpritz from '../images/best sellers/sunset spritz.jpg'
@@ -81,15 +80,15 @@ import PeachyPetals from '../images/get well soon/peachy petals.jpg'
 import LilyCascade from '../images/vases/lily cascade.jpg'
 import RusticElegance from '../images/vases/rustic elegance.jpg'
 import Bark from '../images/vases/bark.jpg'
-import CootonCandy from '../images/vases/cotton candy.jpg'
+import CottonCandy from '../images/vases/cotton candy.jpg'
 import GentleGarden from '../images/vases/gentle garden.jpg'
 import GlossGrace from '../images/vases/gloss and grace.jpg'
 import PlumCrystal from '../images/vases/plum crystal.jpg'
-import MuttedMeadow from '../images/vases/mutted meadow.jpg'
+import MutedMeadow from '../images/vases/mutted meadow.jpg'
 import MossandMist from '../images/vases/moss and mist.jpg'
 
-const CategoryData = () => {
-  return (
+const CategoryData = {
+  
     BestSellers: {
         title: 'Best Sellers',
         items: [
@@ -146,7 +145,62 @@ const CategoryData = () => {
             { name: 'Verdant Charm', price: 69.99, img: VerdantCharm},
         ],
     },
-)
+    FlowerBaskets: {
+        title: "Flower Baskets",
+        items: [
+            { name: 'Sugar Petals', price: 39.99, img: SugarPetals},
+            { name: 'Summer Sonata', price: 50.99, img: SummerSonata},
+            { name: 'Cloud Serenade', price: 49.99, img: CloudSerenade},
+            { name: 'Dahlia Delight', price: 65.99, img: DahliaDelight},
+            { name: 'Tender Bloom', price: 35.99, img: TenderBloom},
+            { name: 'Fields of Gold', price: 49.99, img: FieldsofGold},
+            { name: 'White Noir', price: 42.99, img: WhiteNoir},
+            { name: 'Love in Bloom', price: 69.99, img: LoveinBloom},
+            { name: 'Pink Whisper', price: 39.99, img: PinkWhisper},
+        ],
+    },
+    Graduation: {
+        title: "Graduation",
+        items: [
+            { name: 'Pink Roses', price: 69.99, img: PinkRoses},
+            { name: 'White Grad', price: 71.99, img: WhiteGrad},
+            { name: 'White & Pink', price: 65.99, img: WhiteandPink},
+            { name: 'Teddy Bouquet', price: 79.99, img: TeddyBouquet},
+            { name: 'Mixed Flowers', price: 49.99, img: MixedFlowers},
+            { name: 'Red flower stand', price: 59.99, img: RedFlowers},
+            { name: 'Pink Carnations', price: 64.99, img: PinkCarnations},
+            { name: 'Pink Arrangement', price: 45.99, img: PinkArrangements},
+            { name: 'Gift Bouquet', price: 60.99, img: GiftBouquet},
+        ],
+    },
+    GetWellSoon: {
+        title: "Get well soon",
+        items: [
+            { name: 'Bubblegum Blush', price: 79.99, img: BubblegumBlush},
+            { name: 'Blushed', price: 75.99, img: Blushed},
+            { name: 'Rosy Glow', price: 39.99, img: RosyGlow},
+            { name: 'Rouge Reverie', price: 69.99, img: RougeReverie},
+            { name: 'Fuchsia Fade', price: 55.99, img: FuchsiaFade},
+            { name: 'Pink Symphony', price: 45.99, img: PinkSymphony},
+            { name: 'Powdered Palette', price: 79.99, img: PowderedPalette},
+            { name: 'Mellow Yellow', price: 44.99, img: MellowYellow},
+            { name: 'Peachy PEtals', price: 64.99, img: PeachyPetals},
+        ],
+    },
+    Vases: {
+        title: "Vases",
+        items: [
+            { name: 'Lily Cascade', price: 55.99, img: LilyCascade},
+            { name: 'Rustic Elegance', price: 59.99, img: RusticElegance},
+            { name: 'Bark', price: 39.99, img: Bark},
+            { name: 'Cotton Candy', price: 37.99, img: CottonCandy},
+            { name: 'Gentle Garden', price: 69.99, img: GentleGarden},
+            { name: 'Gloss & Grace', price: 36.99, img: GlossGrace},
+            { name: 'Plum Crystal', price: 44.99, img: PlumCrystal},
+            { name: 'Muted Meadow', price: 65.99, img: MutedMeadow},
+            { name: 'Moss & Mist', price: 75.99, img: MossandMist},
+        ],
+    },
 }
 
 export default CategoryData

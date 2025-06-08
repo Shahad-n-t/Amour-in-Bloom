@@ -6,6 +6,7 @@ import About from './components/About';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 import Categories from './components/Categories';
+import CategoryPage from './components/CategoryPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
        <Route path='/About' element={<About/>}/>
        <Route path='/ContactUs' element={<ContactUs/>}/>
        <Route path='/Categories' element={<Categories/>}/>
+       <Route path='/categories/:categoryName' element={<CategoryPage/>}/>
    </Routes>
      <Footer/>
    </Router>

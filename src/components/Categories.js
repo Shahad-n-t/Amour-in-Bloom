@@ -23,7 +23,7 @@ const Categories = () => {
                 <img src={bestSellers} alt='our best sellers'/>
                 <h5>Shop <span>Best sellers</span></h5>
                 <div className='arrow-container'>
-                <Link to='/BestSellers'>
+                <Link to='/categories/BestSellers'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
                 </Link>
                 </div>
@@ -32,7 +32,7 @@ const Categories = () => {
                 <img src={bigBouquets} alt='big floral arrangements'/>
                 <h5>Shop <span>Big floral arrangements</span></h5>
                 <div className='arrow-container'>
-                <Link to='/BigBouquets'>
+                <Link to='/categories/BigBouquets'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
                 </Link>
                 </div>
@@ -41,7 +41,7 @@ const Categories = () => {
                 <img src={flowerVases} alt='flowers in vases'/>
                 <h5>Shop <span>Flowers in vases</span></h5>
                 <div className='arrow-container'>
-                <Link to='/FlowersinVases'>
+                <Link to='/categories/FlowersinVases'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
                 </Link>
                 </div>
@@ -50,7 +50,7 @@ const Categories = () => {
                 <img src={flowerBouquets} alt='flower bouquets'/>
                 <h5>Shop <span>Flower bouquets</span></h5>
                 <div className='arrow-container'>
-                <Link to='/FlowerBouquets'>
+                <Link to='/categories/FlowerBouquets'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
                 </Link>
                 </div>
@@ -59,7 +59,7 @@ const Categories = () => {
                 <img src={flowerBaskets} alt='flower baskets'/>
                 <h5>Shop <span>Flower baskets</span></h5>
                 <div className='arrow-container'>
-                <Link to='/FlowerBaskets'>
+                <Link to='/categorie/FlowerBaskets'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
                 </Link>
                 </div>
@@ -68,7 +68,7 @@ const Categories = () => {
                 <img src={graduation} alt='gifts for graduates'/>
                 <h5>Shop <span>Graduation</span></h5>
                 <div className='arrow-container'>
-                <Link to='/Graduation'>
+                <Link to='/categories/Graduation'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
                 </Link>
                 </div>
@@ -77,7 +77,7 @@ const Categories = () => {
                 <img src={getWellSoon} alt='get well soon flowers'/>
                 <h5>Shop <span>Get well soon</span></h5>
                 <div className='arrow-container'>
-                <Link to='/GetWellSoon'>
+                <Link to='/categories/GetWellSoon'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
                 </Link>
                 </div>
@@ -86,7 +86,7 @@ const Categories = () => {
                 <img src={vases} alt='vases'/>
                 <h5>Shop <span>Vases</span></h5>
                 <div className='arrow-container'>
-                <Link to='/Vases'>
+                <Link to='/categories/Vases'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
                 </Link>
                 </div>
