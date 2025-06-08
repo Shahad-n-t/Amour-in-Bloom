@@ -58,7 +58,7 @@ nav ul li a:hover{
   align-items: center;
   font-weight: bold;
   font-family: 'Markazi Text';
-  font-size: 21px;
+  font-size: 22px;
 }
 
 .nav-links.visible {
@@ -613,6 +613,23 @@ font-size: 18px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+.category-link2 {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent !important;
+}
+
+.category-link:focus-visible {
+  outline: 2px solid #D183A9; 
+  outline-offset: 4px;
+}
+
 .category-card img {
   height: 200px;
   width: 100%;
@@ -662,6 +679,115 @@ font-size: 18px;
   text-decoration: underline;
   font-style: italic;
   font-weight: bold;
+}
+
+/*Category pages*/
+
+.category-image-header {
+  height: 110px;
+  width: 100% ;
+  background-image: url('./images/headers/flowers.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 20px;
+  display: block;
+}
+
+.category-backBtn {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.category-backBtn h2 {
+  font-size: 25px;
+  color: #3A345B;
+}
+
+.backbtn-icon:hover{
+  color: #931251;
+}
+
+.backbtn-icon {
+  color: #D183A9;
+  transition: color 0.4s ease;
+}
+
+.category-text-header {
+  padding: 10px;
+  padding-left: 30px;
+  text-align: left;
+  font-size: 38px;
+  color: #4B1535;
+  font-weight: bold;
+}
+
+.category-products {
+  background-color: #F4F4F2;
+  min-height: 180vh;
+  box-sizing: border-box;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 36px;
+  padding: 20px;
+  margin-bottom: 4rem;
+}
+
+.product-card {
+  background-color: #3A345B;
+  padding: 30px;
+  border-radius: 20px;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  border: 0;
+}
+
+.product-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+  padding-bottom: 0;
+  font-size: 29px;
+  color: #E1DDF3;
+}
+
+.product-text h5 {
+  font-size: 27px;
+}
+
+.product-button {
+  padding: 16px 28px 16px 28px;
+  background-color: #E1C9D5;
+  text-align: center;
+  border-radius: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #4B1535;
+  width: fit-content;
+  align-self: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-button:hover {
+  background-color: #cf5391;
+  color: #fff3f9;
 }
 
 /* Footer css:*/

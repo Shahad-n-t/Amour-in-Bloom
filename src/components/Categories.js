@@ -19,78 +19,78 @@ const Categories = () => {
         </header>
         <main className='categories'>
         <div className='category-grid'>
+            <Link to='/categories/BestSellers' className='category-link2'>
             <article className='category-card'>
                 <img src={bestSellers} alt='our best sellers'/>
                 <h5>Shop <span>Best sellers</span></h5>
                 <div className='arrow-container'>
-                <Link to='/categories/BestSellers'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
-                </Link>
                 </div>
             </article> 
+            </Link>
+            <Link to='/categories/BigBouquets' className='category-link2'>
             <article className='category-card'>
                 <img src={bigBouquets} alt='big floral arrangements'/>
                 <h5>Shop <span>Big floral arrangements</span></h5>
                 <div className='arrow-container'>
-                <Link to='/categories/BigBouquets'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
-                </Link>
                 </div>
             </article>
+            </Link>
+            <Link to='/categories/FlowersinVases' className='category-link2'>
              <article className='category-card'>
                 <img src={flowerVases} alt='flowers in vases'/>
                 <h5>Shop <span>Flowers in vases</span></h5>
                 <div className='arrow-container'>
-                <Link to='/categories/FlowersinVases'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
-                </Link>
                 </div>
             </article>
+            </Link>
+            <Link to='/categories/FlowerBouquets' className='category-link2'>
              <article className='category-card'>
                 <img src={flowerBouquets} alt='flower bouquets'/>
                 <h5>Shop <span>Flower bouquets</span></h5>
                 <div className='arrow-container'>
-                <Link to='/categories/FlowerBouquets'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
-                </Link>
                 </div>
             </article>
+            </Link>
+            <Link to='/categories/FlowerBaskets' className='category-link2'>
              <article className='category-card'>
                 <img src={flowerBaskets} alt='flower baskets'/>
                 <h5>Shop <span>Flower baskets</span></h5>
                 <div className='arrow-container'>
-                <Link to='/categorie/FlowerBaskets'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
-                </Link>
                 </div>
             </article>
+            </Link>
+            <Link to='/categories/Graduation' className='category-link2'>
              <article className='category-card'>
                 <img src={graduation} alt='gifts for graduates'/>
                 <h5>Shop <span>Graduation</span></h5>
                 <div className='arrow-container'>
-                <Link to='/categories/Graduation'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
-                </Link>
                 </div>
             </article>
+            </Link>
+            <Link to='/categories/GetWellSoon' className='category-link2'>
              <article className='category-card'>
                 <img src={getWellSoon} alt='get well soon flowers'/>
                 <h5>Shop <span>Get well soon</span></h5>
                 <div className='arrow-container'>
-                <Link to='/categories/GetWellSoon'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
-                </Link>
                 </div>
             </article>
+            </Link>
+             <Link to='/categories/Vases' className='category-link2'>
              <article className='category-card'>
                 <img src={vases} alt='vases'/>
                 <h5>Shop <span>Vases</span></h5>
                 <div className='arrow-container'>
-                <Link to='/categories/Vases'>
                 <ArrowCircleUpIcon className='arrow' fontSize='large'/>
-                </Link>
                 </div>
             </article>
+            </Link>
         </div>
     </main>
     </>

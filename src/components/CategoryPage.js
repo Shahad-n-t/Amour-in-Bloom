@@ -20,7 +20,7 @@ const CategoryPage = () => {
     <>
     <div className='category-image-header'></div>
     <div className='category-backBtn' onClick={() => navigate(-1)} style={{cursor: 'pointer'}}>
-      <FontAwesomeIcon icon={faArrowLeft} size='2x' />
+      <FontAwesomeIcon icon={faArrowLeft} size='2x' className='backbtn-icon' />
       <h2>Go back</h2>
     </div>
     <header className='category-text-header'>{category.title}</header>
