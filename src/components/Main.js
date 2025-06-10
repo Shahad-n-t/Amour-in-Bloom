@@ -2,8 +2,8 @@ import React from 'react'
 import BestSellers from '../images/shop aesthetic/best sellers.jpg';
 import Bouquet from '../images/shop aesthetic/purple bouquet.jpg';
 import Baskets from '../images/shop aesthetic/baskets.jpg'
-import WhiteFlowers from '../images/peatal colors/white flower.jpg'
-import PinkFlowers from '../images/peatal colors/pink flowers.jpg'
+import WhiteFlowers from '../images/petal colors/white flower.jpg'
+import PinkFlowers from '../images/petal colors/pink flowers.jpg'
 import { Link } from 'react-router-dom';
 
 const Categories = () => {
@@ -55,14 +55,14 @@ const Categories = () => {
          </article>
         </div>
         <div className='category-link'>
-          <Link to='Categories' className='seeMore'><u>See More</u></Link>
+          <Link to='/Categories' className='seeMore'><u>See More</u></Link>
          </div>
 
 
 
         
         <div className='petal-header'>
-        <a href='/' className='flowertype-title'><u>Get to know flowers and what they have to say!</u></a>
+        <Link to='/PetalColors' className='flowertype-title'><u>Get to know flowers and what they have to say!</u></Link>
         </div>
 
 
@@ -75,7 +75,9 @@ const Categories = () => {
                 Commonly associated with weddings, they symbolize new beginnings and pure love....</p>
           </div>
           <div className='flowertype-button'>
+            <Link to='/PetalColors'>
             <button className='petalcolor-button' aria-label='On-Click'>Click to read more!</button>
+            </Link>
           </div>
          </article>
 
@@ -87,7 +89,9 @@ const Categories = () => {
                  Light pinks suggest innocence, youth, and tenderness....</p>
           </div>
           <div className='flowertype-button'>
+            <Link to='/PetalColors'>
             <button className='petalcolor-button' aria-label='On-Click'>Click to read more!</button>
+            </Link>
           </div>
          </article>
         </div>

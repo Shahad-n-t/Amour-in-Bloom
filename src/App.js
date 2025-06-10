@@ -8,6 +8,7 @@ import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 import Categories from './components/Categories';
 import CategoryPage from './components/CategoryPage';
+import PetalColors from './components/PetalColors';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
        <Route path='/ContactUs' element={<ContactUs/>}/>
        <Route path='/Categories' element={<Categories/>}/>
        <Route path='/categories/:categoryName' element={<CategoryPage/>}/>
+       <Route path='/PetalColors' element={<PetalColors/>}/>
    </Routes>
      <Footer/>
    </Router>

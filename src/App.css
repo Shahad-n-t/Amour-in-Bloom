@@ -241,6 +241,11 @@ text-align: right;
   font-weight: 800;
   text-align: left;
   color: #4B1535;
+  transition: all 0.3s ease;
+}
+
+.flowertype-title:hover {
+  color: #607EA2;
 }
 
 .flowertype-text {
@@ -272,16 +277,22 @@ font-size: 18px;
 }
 
 .petalcolor-button {
-  font-size: 12px;
-  padding: 7px;
+  font-size: 16px;
+  padding: 10px;
   text-align: center;
   font-family: 'Markazi Text';
   font-weight: 600;
-  background-color: #3A345B;
-  color: #F09FC6;
+  background-color: #607EA2;
+  color: #fdfdfd;
   border-radius: 40px;
+  border: 2px solid #3A345B;
+  transition: all 0.4s ease;
 }
 
+.petalcolor-button:hover {
+  background-color: #3A345B;
+  color: #F09FC6;
+}
 
 /* About us page css:*/
 
@@ -877,6 +888,101 @@ font-size: 18px;
 
 .custom-confirm-button:hover {
   background-color: #920f4f;
+}
+
+/*Petal colors styling*/
+
+.bloomcolors {
+  background-color: #F4F4F2;
+  min-height: 140vh;
+  box-sizing: border-box;
+}
+
+.bloomcolors-header{
+  padding: 30px;
+  background-color: #D183A9;
+}
+
+.bloomcolors-header h2 {
+  color: #4B1535;
+  text-align: left;
+  font-size: 38px;
+  font-family: "Markazi Text";
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.bloomcolors-header h6 {
+  color: #FDFBCF;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Markazi Text";
+}
+
+.bloomcolors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 3rem;
+  column-gap: 7rem;
+  max-width: 1000px;
+  padding: 40px;
+  padding-left: 240px;
+}
+
+.bloomcolors-card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  padding: 38px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.08);
+  gap: 1rem;
+  align-items: flex-start;
+  background-color: #E1DDF3;
+  border: 2px solid #A24C61;
+}
+
+.bloomcolors-card img {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.bloomcolors-card h3 {
+  font-size: 26px;
+  font-family: 'Markazi Text';
+  color: #4B1535;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.bloomcolors-card h4 {
+  font-size: 22px;
+  font-family: 'Markazi Text';
+  color: #5D284C;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.bloomcolors-card span {
+  color: #A24C61;
+  font-weight: 600;
+}
+
+.bloomcolors-card p {
+  font-size: 20px;
+  margin: 0;
+  color: #5D284C;
+  line-height: 1.4;
+    font-weight: 600;
+
 }
 
 /* Footer css:*/
