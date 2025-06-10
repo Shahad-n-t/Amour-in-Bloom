@@ -583,6 +583,44 @@ font-size: 18px;
   opacity: 0.6;
 }
 
+/*Contact us alert message styling*/
+
+.custom-popUp {
+  background: #fff8f0; 
+  border-radius: 20px;
+  font-family: 'Markazi Text';
+  color: #e579af; 
+  box-shadow: 0 8px 20px rgba(107, 76, 59, 0.2);
+}
+
+.custom-Title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #bc1669; 
+}
+
+.custom-Content {
+  font-size: 1.3rem;
+  color: #610c35;
+  margin-top: 10px;
+}
+
+.custom-confirmBtn {
+  background-color: #e972ab;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(214, 127, 95, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.custom-confirmBtn:hover {
+  background-color: #b1487b;
+}
+
 
 /* Category section*/
 

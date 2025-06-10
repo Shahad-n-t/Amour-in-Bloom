@@ -20,7 +20,13 @@ const ContactUs = (props) => {
     Swal.fire({
       title: "Thank you for your patience!",
       text: "We will get to you as soon as possible!",
-      icon: "success"
+      icon: "success",
+      customClass: {
+                 popup: 'custom-popUp',
+                 title: 'custom-Title',
+                 content: 'custom-Content',
+                 confirmButton: 'custom-confirmBtn',
+                 }
     });
 
     setUserName("");
