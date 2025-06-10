@@ -30,7 +30,7 @@ const Categories = () => {
          <article className='card'>
          <img className='card-img' src={BestSellers} alt='best sellers'/>
          <div className='button-style'>
-          <Link to='/BestSellers'>
+          <Link to='/categories/BestSellers'>
             <button className='card-button' aria-label='On-Click'>Best sellers</button>
           </Link>
           </div>
@@ -39,7 +39,7 @@ const Categories = () => {
          <article className='card'>
           <img className='card-img' src={Bouquet} alt='best sellers'/>
           <div className='button-style'>
-            <Link to='/FlowerBouquets'>
+            <Link to='/categories/FlowerBouquets'>
              <button className='card-button' aria-label='On-Click'>Flower bouquets</button>
             </Link>
           </div>
@@ -48,7 +48,7 @@ const Categories = () => {
          <article className='card'>
           <img className='card-img' src={Baskets} alt='best sellers'/>
           <div className='button-style'>
-            <Link to='/FlowerBaskets'>
+            <Link to='/categories/FlowerBaskets'>
               <button className='card-button' aria-label='On-Click'>Flower baskets</button>
             </Link>
          </div>

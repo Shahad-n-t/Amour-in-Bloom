@@ -3,6 +3,8 @@ import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import CategoryData from './CategoryData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
+
 
 
 const CategoryPage = () => {
@@ -16,6 +18,20 @@ const CategoryPage = () => {
   return <Navigate to='/Categories' replace/>;
  };
 
+const addToCartMessages = {
+  BestSellers: "A favorite for a reason! Added to your cart 🌟",
+  BigBouquets: "Big beauty coming your way! Added to cart 💐",
+  FlowersinVases: "Elegance in a vase! In the cart now 🌸",
+  FlowerBouquets: "Fresh bouquet added — brighten your day! 💕",
+  FlowerBaskets: "Basket of beauty coming up! Added to your cart 🎁",
+  Graduation: "Ready to celebrate someone special! — flowers added! 🎓",
+  GetWellSoon: "Sending sweet recovery vibes! — added to cart 🌈",
+  Vases: "A beautiful base for your blooms is on hold! 🏺",
+};
+
+
+
+ 
   return (
     <>
     <div className='category-image-header'></div>
@@ -34,7 +50,26 @@ const CategoryPage = () => {
               <h4>{item.name}</h4>
               <h5>{item.price.toFixed(2)}</h5>
             </div>
-            <button className='product-button' aria-label='Add to cart'>
+            <button className='product-button' aria-label='Add to cart' onClick={(e) => {
+               e.preventDefault(); 
+               
+               const message =
+               addToCartMessages[categoryName] ||
+               "Your arrangement is in the cart — ready when you are 💐"
+
+               Swal.fire({
+               title: "Petals on the way!",
+               text: message,
+               icon: "success",
+               confirmButtonText: 'Lovely!',
+                customClass: {
+                 popup: 'custom-popup',
+                 title: 'custom-title',
+                 content: 'custom-content',
+                 confirmButton: 'custom-confirm-button',
+                 }
+              });
+            }}>
               Add to cart
             </button>
           </article>

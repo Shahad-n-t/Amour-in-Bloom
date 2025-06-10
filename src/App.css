@@ -161,14 +161,22 @@ margin: 40px;
 }
 
 .card-button {
-  font-size: 18px;
-  padding: 10px;
+  font-size: 20px;
+  padding: 13px;
   text-align: center;
   font-family: 'Markazi Text';
   font-weight: 500;
-  background-color: #A24C61;
+  background-color: #c6377c;
   color: #FDFBCF;
   border-radius: 40px;
+  border: 1px solid #fbf8c2;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(214, 127, 95, 0.5);
+}
+
+.card-button:hover {
+  background-color: #7d1849;
+  color: #ffffff;
 }
 
 .category-link {
@@ -184,6 +192,11 @@ text-align: right;
   font-size: 28px;
   font-family: 'Markazi Text';
   font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.seeMore:hover {
+  color: #610c35;
 }
 
 .petal-colors {
@@ -788,6 +801,44 @@ font-size: 18px;
 .product-button:hover {
   background-color: #cf5391;
   color: #fff3f9;
+}
+
+/* add to cart message alert styling*/
+
+.custom-popup {
+  background: #fff8f0; 
+  border-radius: 20px;
+  font-family: 'Markazi Text';
+  color: #931251; 
+  box-shadow: 0 8px 20px rgba(107, 76, 59, 0.2);
+}
+
+.custom-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #931251; 
+}
+
+.custom-content {
+  font-size: 1.3rem;
+  color: #4B1535;
+  margin-top: 10px;
+}
+
+.custom-confirm-button {
+  background-color: #d9297e;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(214, 127, 95, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.custom-confirm-button:hover {
+  background-color: #920f4f;
 }
 
 /* Footer css:*/
