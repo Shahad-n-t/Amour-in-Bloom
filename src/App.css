@@ -896,6 +896,7 @@ font-size: 18px;
   background-color: #F4F4F2;
   min-height: 140vh;
   box-sizing: border-box;
+  padding-bottom: 30px;
 }
 
 .bloomcolors-header{
@@ -942,7 +943,7 @@ font-size: 18px;
 }
 
 .bloomcolors-card img {
-  width: 140px;
+  width: 160px;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;

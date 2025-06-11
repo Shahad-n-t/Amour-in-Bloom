@@ -6,7 +6,7 @@ import WhiteFlowers from '../images/petal colors/white flower.jpg'
 import PinkFlowers from '../images/petal colors/pink flowers.jpg'
 import { Link } from 'react-router-dom';
 
-const Categories = () => {
+const Main = () => {
   return (
     <section>
       <header className='welcome-message'>
@@ -101,4 +101,4 @@ const Categories = () => {
 )
 }
 
-export default Categories
+export default Main;
