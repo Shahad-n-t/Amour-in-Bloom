@@ -1,9 +1,10 @@
 import React from 'react'
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
-import CategoryData from './CategoryData'
+import CategoryData from '../categories/CategoryData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';
+import { useCart } from '../cart/CartContext';
 
 
 
@@ -13,6 +14,8 @@ const CategoryPage = () => {
  const category = CategoryData[categoryName]
 
  const navigate= useNavigate();
+ const { addToCart } = useCart();
+
 
  if (!category) {
   return <Navigate to='/Categories' replace/>;
@@ -53,6 +56,8 @@ const addToCartMessages = {
             <button className='product-button' aria-label='Add to cart' onClick={(e) => {
                e.preventDefault(); 
                
+               addToCart(item);
+
                const message =
                addToCartMessages[categoryName] ||
                "Your arrangement is in the cart — ready when you are 💐"
