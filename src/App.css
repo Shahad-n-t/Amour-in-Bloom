@@ -986,6 +986,148 @@ font-size: 18px;
 
 }
 
+
+/*Shopping cart styling*/
+
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: #D9D9D9;
+}
+
+.cart-table {
+  flex: 2;
+  background-color: #fff;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.cart-table th {
+  background-color: #5D284C;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+}
+
+.cart-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #969696;
+  vertical-align: middle;
+}
+
+.cart-remove-btn {
+  background-color: #4B1535;
+  color: #D183A9;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cart-product-cell {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-product-cell img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 1px solid #610c35;
+}
+
+.quantity-control button {
+  background-color: #5D284C;
+  color: #E1C9D5;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.order-summary {
+  flex: 1;
+  background-color: #FDFBCF;
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.order-summary h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #5D284C;
+}
+
+.order-summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: #5D284C;
+  font-weight: 500;
+}
+
+.checkout-btn {
+  display: flex;
+  background-color: #D183A9;
+  color: #FFFFFF;
+  padding: 0.8rem;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.checkout-icon {
+  display: flex;
+  color: white;
+  padding: 12px;
+}
+
+.coupin-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.coupon-input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  background-color: #fbdce8;
+  color: #4B1535;
+  border-radius: 5px;
+}
+
+.apply-coupon-btn {
+  background-color: #3b0033;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.clear-cart-link {
+  margin-left: auto;
+  color: #4B1535;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+
+
 /* Footer css:*/
 
 footer section{
