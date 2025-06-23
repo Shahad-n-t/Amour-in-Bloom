@@ -982,26 +982,41 @@ font-size: 18px;
   margin: 0;
   color: #5D284C;
   line-height: 1.4;
-    font-weight: 600;
+  font-weight: 600;
 
 }
 
 
 /*Shopping cart styling*/
 
+
+
+.page-wrapper.cart-page {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 .cart-container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 2rem;
   gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
   background-color: #D9D9D9;
+  overflow-x: hidden;
 }
 
 .cart-table {
-  flex: 2;
+  flex: 1;
   background-color: #fff;
   border-collapse: collapse;
-  width: 100%;
+  min-width: 0;
 }
 
 .cart-table th {
@@ -1011,11 +1026,45 @@ font-size: 18px;
   text-align: left;
 }
 
+.cart-table thead th {
+  font-size: 22px;
+  color: #FDFBCF;
+  border-bottom: 2px solid #ccc;
+  padding: 12px 10px;
+  text-align: left;
+}
+
+.cart-table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
 .cart-table td {
   padding: 1rem;
   border-bottom: 1px solid #969696;
   vertical-align: middle;
 }
+
+.cart-product-cell p:first-child {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 4px 0;
+  color: #71104a;
+}
+
+.cart-product-cell p:last-child {
+  font-size: 16px;
+  color: #d26198;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cart-table tbody tr td:last-child {
+  font-size: 18px;
+  font-weight: 700;
+  color: #71104a;
+  padding-right: 12px;
+}
+
 
 .cart-remove-btn {
   background-color: #4B1535;
@@ -1026,6 +1075,7 @@ font-size: 18px;
   height: 32px;
   font-weight: bold;
   cursor: pointer;
+  margin-left: 1.5rem;
 }
 
 .cart-product-cell {
@@ -1051,12 +1101,24 @@ font-size: 18px;
   font-weight: bold;
 }
 
+.quantity-control span {
+  font-size: 18px;
+  margin: 0 10px;
+  font-weight: 600;
+  color: #c6377c;
+}
+
 .order-summary {
   flex: 1;
   background-color: #FDFBCF;
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 4px;
+  max-width: 280px;
+  width: 100%;
   font-size: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
 }
 
 .order-summary h3 {
@@ -1064,27 +1126,47 @@ font-size: 18px;
   margin-bottom: 1rem;
   font-weight: 700;
   color: #5D284C;
+  font-size: 22px;
 }
 
 .order-summary-row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
-  color: #5D284C;
+  padding: 5px;
+  font-size: 18px;
+  color: #7f3467;
   font-weight: 500;
 }
 
+.order-summary hr {
+  background-color: #3b0033;
+  height: 2px;
+  border: none;
+  border-radius: 2px;
+  margin: 18px 0px;
+}
+
 .checkout-btn {
-  display: flex;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 0.5rem;
   background-color: #D183A9;
   color: #FFFFFF;
-  padding: 0.8rem;
+  padding: 6px;
+  padding-left: 1rem;
   border: none;
-  width: 100%;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
   margin-top: 1rem;
+  transition: all 0.4s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #a7346b;
 }
 
 .checkout-icon {
@@ -1093,11 +1175,18 @@ font-size: 18px;
   padding: 12px;
 }
 
-.coupin-area {
+.coupon-area {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 2rem;
+  padding: 0 2rem;
+  margin-top: 0;
+  background-color: #D9D9D9;
+}
+
+.coupon-controls {
+  display: flex;
+  gap: 0;
 }
 
 .coupon-input {
@@ -1105,12 +1194,15 @@ font-size: 18px;
   border: 1px solid #ccc;
   background-color: #fbdce8;
   color: #4B1535;
-  border-radius: 5px;
+  font-size: 18px;
+  border-radius: 5px 0 0 5px;
+  width: 280px;
 }
 
 .apply-coupon-btn {
   background-color: #3b0033;
   color: white;
+  font-size: 18px;
   padding: 0.6rem 1rem;
   border: none;
   border-radius: 5px;
@@ -1121,10 +1213,58 @@ font-size: 18px;
 .clear-cart-link {
   margin-left: auto;
   color: #4B1535;
+  font-size: 20px;
   text-decoration: underline;
   cursor: pointer;
   font-weight: 700;
+  padding: 2rem 1rem;
 }
+
+.empty-cart-message {
+  font-size: 40px;
+  font-weight: 500;
+  color: #620c35;
+  padding: 14rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #D9D9D9;
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.free-shipping-banner {
+  background-color: #fbdce8;
+  color: #3b0033;
+  text-align: center;
+  font-weight: 600;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin: 1.5rem 2rem;
+
+  animation: slideFadeIn 0.8s ease-out;
+}
+
+.order-summary-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 300px;
+  margin-left: 3rem;
+  gap: 1rem;
+  padding-top: 5rem;
+}
+
 
 
 

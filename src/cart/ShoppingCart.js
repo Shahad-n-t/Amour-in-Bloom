@@ -2,6 +2,7 @@ import { useCart } from "../cart/CartContext";
 import CategoryData from "../categories/CategoryData";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 
 
@@ -30,10 +31,11 @@ const ShoppingCart = () => {
 
   return (
     <>
+  <div className="page-wrapper cart-page">
   <div className="cart-container">
     {cartItems.length === 0 ? (
       <div className="empty-cart-message">
-        Your cart is currently empty!
+       <i>Your cart is currently empty!</i> 
       </div>
     ) : (
       <>
@@ -83,8 +85,10 @@ const ShoppingCart = () => {
         </table>
 
 
+       <div className="order-summary-wrapper">
         <div className="order-summary">
           <h3>Order Summary</h3>
+          <hr/>
           <div className="order-summary-row">
             <span>Items</span>
             <span>${subtotal.toFixed(2)}</span>
@@ -101,27 +105,42 @@ const ShoppingCart = () => {
             <span>Coupon Discount</span>
             <span>${couponDiscount.toFixed(2)}</span>
           </div>
+          <hr/>
           <div className="order-summary-row">
             <strong>Total Price</strong>
             <strong>${totalPrice.toFixed(2)}</strong>
           </div>
           <div>
+            <Link to='/Checkout'>
             <button className="checkout-btn">Go to Checkout <FontAwesomeIcon icon={faArrowRight} size="1x" className="checkout-icon"/></button>
+            </Link>
           </div>
         </div>
+        {subtotal < 400 && (
+         <div className="free-shipping-banner">
+          🌟 Free shipping on orders over $400!
+         </div>
+       )}
+        </div>
+
       </>
     )}
   </div>
+  </div>
 
+  
 
   {cartItems.length > 0 && (
     <div className="coupon-area">
+      <div className="coupon-controls">
       <input
         className="coupon-input"
         type="text"
         placeholder="Coupon Code"
       />
       <button className="apply-coupon-btn">Apply Coupon</button>
+      </div>
+
       <span
         className="clear-cart-link"
         onClick={() => alert("Add logic to clear the cart here!")}

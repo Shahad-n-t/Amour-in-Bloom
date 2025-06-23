@@ -10,7 +10,8 @@ import Categories from './categories/Categories';
 import CategoryPage from './pages/CategoryPage';
 import PetalColors from './pages/PetalColors';
 import CartProvider from './cart/CartContext';
-import ShoppingCart from './cart/ShoppingCart';
+import ShoppingCart from './cart/ShoppingCart'
+import Checkout from './cart/Checkout';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
        <Route path='/categories/:categoryName' element={<CategoryPage/>}/>
        <Route path='/PetalColors' element={<PetalColors/>}/>
        <Route path='/ShoppingCart' element={<ShoppingCart/>}/>
+       <Route path='/Checkout' element={<Checkout/>}/>
    </Routes>
    </CartProvider>
      <Footer/>
