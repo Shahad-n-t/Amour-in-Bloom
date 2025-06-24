@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import Swal from 'sweetalert2';
+import { useCart } from "../cart/CartContext";
+
 
 
 
@@ -19,6 +21,31 @@ const [zipCode, setZipCode] = useState("");
 
 const [paymentMethod, setPaymentMethod] = useState("");
 
+const [cardName, setCardName] = useState("");
+const [cardNumber, setCardNumber] = useState("");
+const [expiryDate, setExpiryDate] = useState("");
+const [cvv, setCvv] = useState("");
+
+const cardFieldsVaild = paymentMethod !== "Credit Card" || (
+    cardName.trim() &&
+    cardNumber.trim() &&
+    expiryDate.trim() &&
+    cvv.trim()
+)
+
+const formIsValid =
+firstName.trim() &&
+  lastName.trim() &&
+  emailAddress.trim() &&
+  phone.trim() &&
+  country.trim() &&
+  city.trim() &&
+  address.trim() &&
+  zipCode.trim() &&
+  paymentMethod &&
+  cardFieldsVaild;
+
+const { clearCart } = useCart();
 
 
   return (
@@ -78,16 +105,20 @@ const [paymentMethod, setPaymentMethod] = useState("");
     <div className="card-details">
       <div className='checkout-form-grid'>
         <div className='credit-formField'>
-         <input type='text' placeholder='Cardholder Name *' required />
+         <input type='text' placeholder='Cardholder Name *' value={cardName}
+         onChange={(e) => setCardName(e.target.value)} required />
         </div>
         <div className='credit-formField'>
-         <input type='text' placeholder='Card Number *' required />
+         <input type='text' placeholder='Card Number *' value={cardName}
+         onChange={(e) => setCardNumber(e.target.value)} required />
         </div>
         <div className='credit-formField'>
-         <input type='text' placeholder='Expiry Date (MM/YY) *' required />
+         <input type='text' placeholder='Expiry Date (MM/YY) *' value={expiryDate}
+         onChange={(e) => setExpiryDate(e.target.value)} required />
         </div>
         <div className='credit-formField'>
-         <input type='text' placeholder='CVV *' required />
+         <input type='text' placeholder='CVV *' value={cvv}
+         onChange={(e) => setCvv(e.target.value)} required />
         </div>
        </div>
    </div>
@@ -124,9 +155,11 @@ const [paymentMethod, setPaymentMethod] = useState("");
         <h4>By clicking the <span className='place-order'>‘Place Order’</span> button, you agree to the <span className='span'>Privacy policy</span> and <span className='span'>User agreement</span></h4>
     </div>
     <div>
-        <button className='place-order-btn' aria-label='place order'
-        onClick={(e) => {
+        <button className='place-order-btn' aria-label='place order' disabled={!formIsValid}
+            onClick={(e) => {
             e.preventDefault();
+
+            clearCart();
 
             Swal.fire({
                 html: `
@@ -141,7 +174,7 @@ const [paymentMethod, setPaymentMethod] = useState("");
                 confirmButton: 'custom-confirm-button2',
                  }
             });
-        }}>
+            }} >
         Place Order</button>
     </div>
     </div>

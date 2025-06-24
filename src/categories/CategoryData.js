@@ -184,7 +184,7 @@ const CategoryData = {
             { name: 'Pink Symphony', price: 45.99, img: PinkSymphony},
             { name: 'Powdered Palette', price: 79.99, img: PowderedPalette},
             { name: 'Mellow Yellow', price: 44.99, img: MellowYellow},
-            { name: 'Peachy PEtals', price: 64.99, img: PeachyPetals},
+            { name: 'Peachy Petals', price: 64.99, img: PeachyPetals},
         ],
     },
     Vases: {

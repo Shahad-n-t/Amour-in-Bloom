@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 function findProductByName(name) {
   for (const category of Object.values(CategoryData)) {
     const found = category.items.find(item => item.name === name);
@@ -15,7 +16,7 @@ function findProductByName(name) {
 }
 
 const ShoppingCart = () => {
-  const { cartItems, updateQuantity, removeItem } = useCart();
+  const { cartItems, updateQuantity, removeItem, clearCart } = useCart();
 
   const getTotal = () => {
     return cartItems.reduce((total, item) => {
@@ -38,7 +39,10 @@ const ShoppingCart = () => {
   <div className="cart-container">
     {cartItems.length === 0 ? (
       <div className="empty-cart-message">
-       <i>Your cart is currently empty!</i> 
+       <p><i>Your cart feels a little empty... let’s find something beautiful to fill it with!</i></p>
+       <Link to='/Categories'>
+       <button>Tumble Back into the Garden!</button>
+       </Link>
       </div>
     ) : (
       <>
@@ -144,7 +148,7 @@ const ShoppingCart = () => {
 
       <span
         className="clear-cart-link"
-        onClick={() => alert("Add logic to clear the cart here!")}
+        onClick={clearCart}
       >
         Clear Shopping cart
       </span>

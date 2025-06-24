@@ -51,7 +51,7 @@ const addToCartMessages = {
             <img src={item.img} alt={item.name}/>
             <div className='product-text'>
               <h4>{item.name}</h4>
-              <h5>{item.price.toFixed(2)}</h5>
+              <h5>${item.price.toFixed(2)}</h5>
             </div>
             <button className='product-button' aria-label='Add to cart' onClick={(e) => {
                e.preventDefault(); 
