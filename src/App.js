@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './pages/About';
 import ContactUs from './pages/ContactUs';
+import TrackOrder from './pages/TrackMyOrder';
 import Footer from './components/Footer';
 import Categories from './categories/Categories';
 import CategoryPage from './pages/CategoryPage';
@@ -24,6 +25,7 @@ function App() {
        <Route path='/' element={<Home/>}/>
        <Route path='/About' element={<About/>}/>
        <Route path='/ContactUs' element={<ContactUs/>}/>
+       <Route path='/TrackOrder' element={<TrackOrder/>}/>
        <Route path='/Categories' element={<Categories/>}/>
        <Route path='/categories/:categoryName' element={<CategoryPage/>}/>
        <Route path='/PetalColors' element={<PetalColors/>}/>

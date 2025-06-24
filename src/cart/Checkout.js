@@ -160,10 +160,14 @@ const { clearCart } = useCart();
             e.preventDefault();
 
             clearCart();
+            const orderNumber = '123456';
 
             Swal.fire({
                 html: `
-                <h2 class="swal-title">Thank you! Your order is complete!</h2>
+                <h2 class="swal-title">
+                Thank you! Your order number is 
+                <span style="color: #d26198; font-weight: bold;">${orderNumber}</span>!
+                </h2>
                 <img src="/email_1990251.png" alt="Confirmation" width="180" height="180" style="margin: 1rem auto; display: block;" />
                 <p class="swal-text">You will be receiving a confirmation email with the order details once your order is confirmed!</p>
                 `,

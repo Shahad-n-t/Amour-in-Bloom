@@ -21,6 +21,7 @@ nav{
   margin-top: 12px;
   cursor: pointer;
   width: 270px;
+  padding-right: 12px;
 }
 
 .navbar {
@@ -59,6 +60,7 @@ nav ul li a:hover{
   font-weight: bold;
   font-family: 'Markazi Text';
   font-size: 22px;
+  padding: 3px;
 }
 
 .nav-links.visible {
@@ -1515,6 +1517,12 @@ input[type="radio"] {
   text-align: center;
 }
 
+.order-number {
+  color: #d26198;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 .swal-text {
   font-size: 20px;
   font-family: "Markazi Text";
@@ -1528,6 +1536,79 @@ input[type="radio"] {
   border-radius: 30px !important;
   padding: 3rem !important;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+/*Track my order*/
+
+.track-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #E1C9D5;
+  padding: 4rem 1rem; /* ensures padding on small screens too */
+  box-sizing: border-box;
+}
+
+.track-order-wrapper {
+  max-width: 600px;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 4rem auto;
+  text-align: center;
+  background: #F4F4F2;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.track-order-wrapper h2 {
+  font-size: 2rem;
+  font-family: "Markazi Text";
+  margin-bottom: 1.5rem;
+  color: #5D284C;
+}
+
+.track-order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.track-order-form input {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.track-order-form button {
+  padding: 0.75rem;
+  background-color: #607EA2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Markazi Text";
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.track-order-form button:hover {
+  background-color: #2c3b4e;
+  color: #FDFBCF;
+}
+
+.order-status-message {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  color: #920f4f;
+  font-family: "Markazi Text";
+  font-weight: 700;
 }
 
 
