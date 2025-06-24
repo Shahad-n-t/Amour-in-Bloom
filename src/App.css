@@ -990,15 +990,26 @@ font-size: 18px;
 /*Shopping cart styling*/
 
 
-
 .page-wrapper.cart-page {
   padding: 0;
+  padding-top: 0;
   margin: 0;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
 }
 
+.cart-header {
+  padding: 15px 15px 1px 20px;
+  background-color: #D9D9D9;
+}
+
+.cart-header h2{
+  font-size: 30px;
+  font-weight: 700;
+  color: #4B1535;
+  text-align: left;
+}
 
 .cart-container {
   display: flex;
@@ -1017,6 +1028,8 @@ font-size: 18px;
   background-color: #fff;
   border-collapse: collapse;
   min-width: 0;
+  margin-top: 0;
+  width: 100%;
 }
 
 .cart-table th {
@@ -1169,6 +1182,7 @@ font-size: 18px;
   background-color: #a7346b;
 }
 
+
 .checkout-icon {
   display: flex;
   color: white;
@@ -1247,8 +1261,8 @@ font-size: 18px;
   color: #3b0033;
   text-align: center;
   font-weight: 600;
-  padding: 14px;
-  font-size: 16px;
+  padding: 16px;
+  font-size: 18px;
   border-radius: 8px;
   margin: 1.5rem 2rem;
 
@@ -1265,6 +1279,209 @@ font-size: 18px;
   padding-top: 5rem;
 }
 
+
+/*Checkout styling*/
+
+.checkout-header {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #4B1535;
+  font-family: "Markazi Text";
+  text-align: left;
+  padding-left: 3rem;
+  background-color: #D9D9D9;
+  margin: 0;
+}
+
+.checkout-header h2 {
+  margin: 0;
+  padding: 2rem 0 2rem 0;
+}
+
+.checkout-form {
+  background-color: #D9D9D9;
+  margin: 0;
+}
+
+.checkout-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  margin-bottom: 15px;
+  padding-left: 3rem;
+  column-gap: 6rem;
+  row-gap: 1rem;
+  max-width: 200px;
+}
+
+.form-heading {
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+.form-heading h3 {
+  font-size: 20px;
+  font-family: "Markazi Text";
+  font-weight: bold;
+  color: #A24C61;
+  text-align: left;
+  padding: 10px 0 10px 50px;
+  margin: 0;
+}
+
+.checkout-formField input {
+  width: 300px;
+  background-color: #E1C9D5;
+  border: 1px solid #4B1535;
+  border-radius: 14px;
+  color: #5D284C;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0.4rem 0 0.4rem 1rem;
+}
+
+.checkout-formField input::placeholder {
+  color: #7a3864;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.payment-option {
+  font-size: 18px;
+  color: #4B1535;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #5D284C;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.credit-formField input {
+  width: 250px;
+  background-color: #e8afcb;
+  border: 1px solid #4B1535;
+  border-radius: 14px;
+  color: #5D284C;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0.4rem 0 0.4rem 1rem;
+}
+
+.credit-formField input::placeholder {
+  color: #7a3864;
+}
+
+.separator {
+  background-color: #931251;
+  height: 2px;
+  border: none;
+  border-radius: 2px;
+  width: 50%;
+  margin: 0 2.5rem;
+}
+
+.checkout-elements {
+  background-color: #D9D9D9;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.terms {
+  color: #631b47;
+  font-size: 18px;
+  font-weight: 200;
+  font-family: "Markazi Text";
+  padding-left: 2rem;
+  margin-top: 0;
+}
+
+.place-order {
+  color: #A24C61;
+  font-weight: bolder;
+}
+
+.span {
+  text-decoration: underline;
+}
+
+.place-order-btn {
+  background-color: #3A345B;
+  color: #D183A9;
+  font-size: 18px;
+  padding: 16px 28px 16px 28px;
+  border: none;
+  border-radius: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.place-order-btn:hover {
+  background-color: #5749a2;
+  color: #e8afcb
+}
+
+/* add to cart message alert styling*/
+
+
+.custom-confirm-button2 {
+  background-color: #FDC2DF;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  color: #4B1535;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(214, 127, 95, 0.5);
+  transition: all 0.4s ease;
+}
+
+.custom-confirm-button2:hover {
+  background-color: #4B1535;
+  color: #FDC2DF;
+}
+
+.swal-title {
+  font-size: 28px;
+  color: #5D284C;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: "Markazi Text";
+  text-align: center;
+}
+
+.swal-text {
+  font-size: 20px;
+  font-family: "Markazi Text";
+  color: #A24C61;
+  font-weight: 500;
+  text-align: center;
+}
+
+.custom-popup2 {
+  background-color: #fff3f7 !important;
+  border-radius: 30px !important;
+  padding: 3rem !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
 
 
 

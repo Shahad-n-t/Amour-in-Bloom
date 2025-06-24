@@ -32,6 +32,9 @@ const ShoppingCart = () => {
   return (
     <>
   <div className="page-wrapper cart-page">
+    <div className="cart-header">
+    <h2>Shopping Cart</h2>
+    </div>
   <div className="cart-container">
     {cartItems.length === 0 ? (
       <div className="empty-cart-message">
@@ -127,8 +130,6 @@ const ShoppingCart = () => {
     )}
   </div>
   </div>
-
-  
 
   {cartItems.length > 0 && (
     <div className="coupon-area">

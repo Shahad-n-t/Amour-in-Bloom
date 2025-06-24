@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+import Swal from 'sweetalert2';
+
 
 
 
@@ -15,6 +17,9 @@ const [city, setCity] = useState("");
 const [address, setAddress] = useState("");
 const [zipCode, setZipCode] = useState("");
 
+const [paymentMethod, setPaymentMethod] = useState("");
+
+
 
   return (
     <>
@@ -25,49 +30,121 @@ const [zipCode, setZipCode] = useState("");
         <div className='form-heading'>
             <h3>Contact Information</h3>
         </div>
+        <div className='checkout-form-grid'>
         <div className='checkout-formField'>
-            <input id='firstname' type='text' value={firstName} onClick={(e) => {setFirstName(e.target.value)}} placeholder='First Name *' required />
+            <input id='firstname' type='text' value={firstName} onChange={(e) => {setFirstName(e.target.value)}} placeholder='First Name *' required />
         </div>
          <div className='checkout-formField'>
-            <input id='lastname' type='text' value={lastName} onClick={(e) => {setLastName(e.target.value)}} placeholder='Last Name *' required />
+            <input id='lastname' type='text' value={lastName} onChange={(e) => {setLastName(e.target.value)}} placeholder='Last Name *' required />
         </div>
          <div className='checkout-formField'>
-            <input id='email' type='email' value={emailAddress} onClick={(e) => {setEmailAddress(e.target.value)}} placeholder='Email Address *' required />
+            <input id='email' type='email' value={emailAddress} onChange={(e) => {setEmailAddress(e.target.value)}} placeholder='Email Address *' required />
         </div>
          <div className='checkout-formField'>
-            <input id='phone' type='tel' value={phone} onClick={(e) => {setPhone(e.target.value)}} placeholder='Phone Number *' required />
+            <input id='phone' type='tel' value={phone} onChange={(e) => {setPhone(e.target.value)}} placeholder='Phone Number *' required />
+        </div>
         </div>
 
         <div className='form-heading'>
             <h3>Shipping Information</h3>
         </div>
+        <div className='checkout-form-grid'>
         <div className='checkout-formField'>
-            <input id='country' type='text' value={country} onClick={(e) => {setCountry(e.target.value)}} placeholder='Country/ Region *' required />
+            <input id='country' type='text' value={country} onChange={(e) => {setCountry(e.target.value)}} placeholder='Country/ Region *' required />
         </div>
         <div className='checkout-formField'>
-            <input id='city' type='text' value={city} onClick={(e) => {setCity(e.target.value)}} placeholder='City *' required />
+            <input id='city' type='text' value={city} onChange={(e) => {setCity(e.target.value)}} placeholder='City *' required />
         </div>
         <div className='checkout-formField'>
-            <input id='text' type='text' value={address} onClick={(e) => {setAddress(e.target.value)}} placeholder='Address *' required />
+            <input id='text' type='text' value={address} onChange={(e) => {setAddress(e.target.value)}} placeholder='Address *' required />
         </div>
         <div className='checkout-formField'>
-            <input id='zip-code' type='text' value={zipCode} onClick={(e) => {setZipCode(e.target.value)}} placeholder='Zip/ Postal code *' required />
+            <input id='zip-code' type='text' value={zipCode} onChange={(e) => {setZipCode(e.target.value)}} placeholder='Zip/ Postal code *' required />
+        </div>
         </div>
 
         <div className='form-heading'>
-            <h3>Payment</h3>
+        <h3>Payment</h3>
         </div>
-        <hr className='seperator'/>
-        <div className='checkout-formField'>
-            <input id='credit-card' type='radio' value='Credit Card' required />
+        <hr className='separator' />
+
+        <div className='payment-options'>
+        <label className='payment-option'>
+        <input type='radio' name='paymentMethod' value='Credit Card' checked={paymentMethod === "Credit Card"}
+         onChange={(e) => setPaymentMethod(e.target.value)} required/>
+         Credit / Debit Card
+        </label>
+        {paymentMethod === "Credit Card" && (
+    <div className="card-details">
+      <div className='checkout-form-grid'>
+        <div className='credit-formField'>
+         <input type='text' placeholder='Cardholder Name *' required />
         </div>
-        <div className='checkout-formField'>
-            <input id='applepay' type='radio' value='Apple Pay' required />
+        <div className='credit-formField'>
+         <input type='text' placeholder='Card Number *' required />
         </div>
-        <div className='checkout-formField'>
-            <input id='on-delivery' type='radio' value='Cash on Delivery' required />
+        <div className='credit-formField'>
+         <input type='text' placeholder='Expiry Date (MM/YY) *' required />
         </div>
+        <div className='credit-formField'>
+         <input type='text' placeholder='CVV *' required />
+        </div>
+       </div>
+   </div>
+   )}
+
+        <label className='payment-option'>
+        <input type='radio' name='paymentMethod' value='Apple Pay' checked={paymentMethod === "Apple Pay"}
+         onChange={(e) => setPaymentMethod(e.target.value)} />
+         Apple Pay
+        </label>
+
+        <label className='payment-option'>
+        <input type='radio' name='paymentMethod' value='Google Pay' checked={paymentMethod === "Google Pay"}
+         onChange={(e) => setPaymentMethod(e.target.value)}/>
+         Google Pay
+        </label>
+
+        <label className='payment-option'>
+        <input type='radio' name='paymentMethod' value='PayPal'checked={paymentMethod === "PayPal"}
+         onChange={(e) => setPaymentMethod(e.target.value)}/>
+         PayPal
+        </label>
+
+        <label className='payment-option'>
+        <input type='radio' name='paymentMethod' value='Cash on Delivery' checked={paymentMethod === "Cash on Delivery"}
+         onChange={(e) => setPaymentMethod(e.target.value)}/>
+         Cash on Delivery
+        </label>
+    </div>
     </form>
+
+    <div className='checkout-elements'>
+    <div className='terms'>
+        <h4>By clicking the <span className='place-order'>‘Place Order’</span> button, you agree to the <span className='span'>Privacy policy</span> and <span className='span'>User agreement</span></h4>
+    </div>
+    <div>
+        <button className='place-order-btn' aria-label='place order'
+        onClick={(e) => {
+            e.preventDefault();
+
+            Swal.fire({
+                html: `
+                <h2 class="swal-title">Thank you! Your order is complete!</h2>
+                <img src="/email_1990251.png" alt="Confirmation" width="180" height="180" style="margin: 1rem auto; display: block;" />
+                <p class="swal-text">You will be receiving a confirmation email with the order details once your order is confirmed!</p>
+                `,
+                confirmButtonText: 'Yay!',
+                customClass: {
+                popup: 'custom-popup2',
+                content: 'custom-content2',
+                confirmButton: 'custom-confirm-button2',
+                 }
+            });
+        }}>
+        Place Order</button>
+    </div>
+    </div>
     </>
   )
 }
